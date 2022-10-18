@@ -16,7 +16,6 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
@@ -24,7 +23,6 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "favorite")
-@XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Favorite.findAll", query = "SELECT f FROM Favorite f"),
     @NamedQuery(name = "Favorite.findByFavorite", query = "SELECT f FROM Favorite f WHERE f.favorite = :favorite"),
